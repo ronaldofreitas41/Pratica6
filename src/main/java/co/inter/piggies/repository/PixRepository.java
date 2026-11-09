@@ -22,8 +22,8 @@ import java.util.UUID;
 @Repository
 public interface PixRepository extends JpaRepository<Pix, UUID> {
 
-    List<Pix> findByCustomerIdAndStatusAndRequestedAtGreaterThanEqualsAndRequestedAtLessThan(
-            UUID customerId,
+    List<Pix> findByCustomerIDAndStatusAndRequestedAtGreaterThanEqualsAndRequestedAtLessThan(
+            UUID customerID,
             String status,
             OffsetDateTime start,
             OffsetDateTime end

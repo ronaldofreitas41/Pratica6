@@ -194,7 +194,7 @@ public class PixService {
 
         // 7 -> Buscando Pix aprovados no mesmo dia
         List<Pix> dailyPixList = pixRepository
-                .findByCustomerIdAndStatusAndRequestedAtGreaterThanEqualsAndRequestedAtLessThan(
+                .findByCustomerIDAndStatusAndRequestedAtGreaterThanEqualsAndRequestedAtLessThan(
                         customer.getId(),
                         "APPROVED",
                         startOfDay,
@@ -248,7 +248,7 @@ public class PixService {
 
             // Buscando Pix aprovados na mesma janela noturna
             List<Pix> nightPixList = pixRepository
-                    .findByCustomerIdAndStatusAndRequestedAtGreaterThanEqualsAndRequestedAtLessThan(
+                    .findByCustomerIDAndStatusAndRequestedAtGreaterThanEqualsAndRequestedAtLessThan(
                             customer.getId(),
                             "APPROVED",
                             startOfNight,
