@@ -59,6 +59,6 @@ public class PixRequestConsumer {
         LOG.info("Mensagem recebida do tópico {} | id: {}", Topics.PIXREQUESTED, id);
 
         // Coloque aqui o processamento da mensagem
-
+        pixService.validadePix(event);
     }
 }
